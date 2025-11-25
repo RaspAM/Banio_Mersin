@@ -45,29 +45,36 @@
   font-size: 2.4em;         /* увеличенный размер шрифта */
   color: #064420;           /* тёмно-зелёный цвет текста */
 }
-
     .buttons {
-      position: fixed; bottom: 0; width: 100%;
-      background: rgba(255,255,255,0.9);
-      padding: 10px;
-      border-top: 1px solid #ccc;
-      display: flex; justify-content: space-around;
-      box-shadow: 0 -2px 6px rgba(0,0,0,0.1);
-    }
-    .btn {
-      background: #43a047; color: white;
-      padding: 12px 18px; border: none;
-      border-radius: 25px; text-decoration: none;
-      font-size: 15px; transition: background 0.3s;
-    }
-    .btn:hover { background: #2e7d32; }
-
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background: transparent;   /* фон убран */
+  padding: 10px;
+  border-top: none;          /* убираем серую линию */
+  display: flex;
+  justify-content: space-around;
+  box-shadow: none;          /* убираем тень */
+}
+.btn {
+  background: rgba(67,160,71,0.85); /* зелёный с лёгкой прозрачностью */
+  color: white;
+  padding: 12px 18px;
+  border: none;
+  border-radius: 25px;
+  text-decoration: none;
+  font-size: 15px;
+  transition: background 0.3s;
+}
+    .btn:hover {
+  background: rgba(46,125,50,0.95); /* чуть темнее при наведении */
+}
     .hidden { display: none; }
   </style>
 </head>
 <body>
   <header>
-    <h1 id="title">  🌿 Добро пожаловать на Исцеление в Мерсин  🌿</h1>
+    <h1 id="title">  🌿 Востановите здоровье в Турции  🌿</h1>
     <div class="lang-switch">
       <button class="lang-btn" onclick="setLang('ru')">RU</button>
       <button class="lang-btn" onclick="setLang('en')">EN</button>
@@ -76,12 +83,12 @@
 
   <div class="content">
     <div id="ru">
-      <p>Минеральные и термальные источники Анатолии известны с времён Римской империи.</p>
+      <p>Целебные инеральные и термальные воды Анатолии известны с времён Римской империи.</p>
       <p>Наши программы помогают при проблемах с суставами (артриты), лишним весом, ЖКТ и псориазе.</p>
       <p>Выберите направление ниже 👇</p>
     </div>
     <div id="en" class="hidden">
-      <p>Mineral and thermal springs of Anatolia have been known since Roman times.</p>
+      <p>The healing mineral and thermal waters of Anatolia have been known since the time of the Roman Empire..</p>
       <p>Our programs support recovery for joints (arthritis) , get rid of obesity naturally, digestion and psoriasis.</p>
       <p>Select your focus below 👇</p>
     </div>
@@ -117,6 +124,7 @@
   </script>
 </body>
 </html>
+
 
 
 
