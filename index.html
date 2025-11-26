@@ -20,8 +20,8 @@
   /* background убран */
   color: #0d47a1; /* тёмно-синий текст */
   padding: 25px 20px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
-}
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);}
+    
     header h1 { margin: 0; font-size: 1.6em; }
 
     .lang-switch { margin-top: 10px; }
@@ -105,7 +105,8 @@
  <script>
   function setLang(lang) {
     if(lang === 'ru') {
-      document.getElementById('title').innerText = "🌿 Восстановите здоровье на средиземноморском побережье Турции минеральные и термальные источники Анатолии 🌿";
+      document.getElementById('title').innerHTML = 
+        "🌿 Восстановите здоровье на средиземноморском побережье Турции 🌿 <br> Минеральные и термальные источники Анатолии";
       document.getElementById('ru').classList.remove('hidden');
       document.getElementById('en').classList.add('hidden');
       document.getElementById('btn-joints').innerText = "🦵 Суставы";
@@ -113,9 +114,8 @@
       document.getElementById('btn-digestion').innerText = "🩺 ЖКТ";
       document.getElementById('btn-psoriasis').innerText = "🌿 Псориаз";
     } else {
-      document.getElementById('title').innerText = "🌿 Recover your health on the Mediterranean coast
-of Turkey <br> 
-with the mineral and thermal springs of Anatolia 🌿";
+      document.getElementById('title').innerHTML = 
+        "🌿 Recover your health on the Mediterranean coast of Turkey 🌿 <br> with the mineral and thermal springs of Anatolia";
       document.getElementById('en').classList.remove('hidden');
       document.getElementById('ru').classList.add('hidden');
       document.getElementById('btn-joints').innerText = "🦵 Joints";
@@ -127,6 +127,7 @@ with the mineral and thermal springs of Anatolia 🌿";
 </script>
 </body>
 </html>
+
 
 
 
