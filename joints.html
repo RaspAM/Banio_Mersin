@@ -1,92 +1,146 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <meta charset="UTF-8" />
-  <title>🦵 Суставы — Mersin Healing</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <style>
-    body {
-      font-family: "Segoe UI", Arial;
-      background: #f0f0f0;
-      padding: 20px;
-      text-align: center;
-    }
-    h1 { color: #064420; font-size: 4vw; }
-    p {
-      line-height: 1.6;
-      font-size: 2.8vw;
-      font-weight: bold;
-      color: #000;
-      text-shadow: 1px 1px 2px rgba(255,255,255,0.8);
-    }
-    .btn {
-      display: inline-block;
-      margin: 10px;
-      padding: 10px 15px;
-      background: #2e7d32;
-      color: #fff;
-      border-radius: 20px;
-      text-decoration: none;
-      font-size: 2.5vw;
-    }
-    .btn:hover { background: #1b5e20; }
-    .hidden { display: none; }
-  </style>
-
-  <!-- Telegram WebApp SDK -->
-  <script src="https://telegram.org/js/telegram-web-app.js"></script>
-
-  <script>
-    function setLang(lang) {
-      if (lang.startsWith("ru")) {
-        document.getElementById("ru").classList.remove("hidden");
-        document.getElementById("en").classList.add("hidden");
-      } else {
-        document.getElementById("en").classList.remove("hidden");
-        document.getElementById("ru").classList.add("hidden");
+  <head>
+    <meta charset="UTF-8" />
+    <title>🦵 Суставы — Mersin Healing</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      body {
+        font-family: "Segoe UI", Arial;
+        background: #f0f0f0;
+        padding: 20px;
+        text-align: center;
       }
-    }
+      p {
+        line-height: 1.6;
+        font-size: 2.8vw;
+        font-weight: bold;
+        color: #000;
+        text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.8);
+      }
+      .btn {
+        display: inline-block;
+        margin: 10px;
+        padding: 10px 15px;
+        background: #2e7d32;
+        color: #fff;
+        border-radius: 20px;
+        text-decoration: none;
+        font-size: 2.5vw;
+      }
+      .btn:hover {
+        background: #1b5e20;
+      }
+      .hidden {
+        display: none;
+      }
+    </style>
 
-    window.onload = function() {
-      const tgLang = Telegram.WebApp.initDataUnsafe?.user?.language_code 
-                     || navigator.language 
-                     || "en";
-      setLang(tgLang.toLowerCase());
-    }
-  </script>
-</head>
-<body>
-  <div style="
-    background-image: url('mozaikaEros.jpg');
-    background-size: cover;
-    background-position: center;
-    filter: brightness(2.3);
-    padding: 40px;
-    font-family: Georgia, serif;
-    line-height: 1.6;
-    border-radius: 12px;
-  ">
-    <!-- Русский текст -->
-    <div id="ru" class="hidden">
-      <p>🌀 Истоки водной терапии суставов уходят в глубочайшую древность — к шумерам, они заметили, что воды горячих источников облегчает боль и возвращает подвижность.</p>  
-      <p>🏛 Позже римляне возвели целые комплексы терм, в Мерсине сохранились редкие мозаичные полы древних терм.</p>
-      <p>🔬 С открытия Иоганна Глаубера в XVII веке началась научная эра бальнеологии. В XVIII веке европейские курорты — Карловы Вары, Мария-Бад, Баден-Баден, Бад-Эмс — стали центрами медицинской мысли.</p>
-      <p>А. Залманов доказал, что термальные воды активируют капилляры и питают хрящи, помогая тысячам пациентов восстановить подвижность. Тепло + минералы + улучшение кровоснабжения — формула, известная ещё шумерам и подтверждённая современной наукой.</p>
-      <p>Мы подбираем методики индивидуально, ведь причины суставных проблем у каждого свои. В комплексе воздействие термальных процедур, минеральных вод, натуральных масел, питания, богатого овощами и фруктами, чистого морского воздуха, а также духовной пищи — посещения святых мест, почитаемых разными конфессиями — создаёт условия для истинного исцеления.</p>
+    <script>
+      function setLang(lang) {
+        if (lang === "ru") {
+          document.getElementById("ru").classList.remove("hidden");
+          document.getElementById("en").classList.add("hidden");
+        } else {
+          document.getElementById("en").classList.remove("hidden");
+          document.getElementById("ru").classList.add("hidden");
+        }
+      }
+
+      function getLangFromUrl() {
+        const params = new URLSearchParams(window.location.search);
+        return params.get("lang") || "ru"; // по умолчанию русский
+      }
+
+      window.onload = function () {
+        setLang(getLangFromUrl());
+      };
+    </script>
+  </head>
+  <body>
+    <div
+      style="
+        background-image: url('mozaikaEros.jpg');
+        background-size: cover;
+        background-position: center;
+        filter: brightness(2.3);
+        padding: 40px;
+        font-family: Georgia, serif;
+        line-height: 1.6;
+        border-radius: 12px;
+      "
+    >
+      <!-- Русский текст -->
+      <div id="ru" class="hidden">
+        <p>
+          🌀 Истоки водной терапии суставов уходят в глубочайшую древность — к
+          шумерам, они заметили, что воды горячих источников облегчает боль и
+          возвращает подвижность.
+        </p>
+        <p>
+          🏛 Позже римляне возвели целые комплексы терм, в Мерсине сохранились
+          редкие мозаичные полы древних терм.
+        </p>
+        <p>
+          🔬 С открытия Иоганна Глаубера в XVII веке началась научная эра
+          бальнеологии. В XVIII веке европейские курорты — Карловы Вары,
+          Мария-Бад, Баден-Баден, Бад-Эмс — стали центрами медицинской мысли.
+        </p>
+        <p>
+          А. Залманов доказал, что термальные воды активируют капилляры и питают
+          хрящи, помогая тысячам пациентов восстановить подвижность. Тепло +
+          минералы + улучшение кровоснабжения — формула, известная ещё шумерам и
+          подтверждённая современной наукой.
+        </p>
+        <p>
+          Мы подбираем методики индивидуально, ведь причины суставных проблем у
+          каждого свои. В комплексе воздействие термальных процедур, минеральных
+          вод, натуральных масел, питания, богатого овощами и фруктами, чистого
+          морского воздуха, а также духовной пищи — посещения святых мест,
+          почитаемых разными конфессиями — создаёт условия для истинного
+          исцеления.
+        </p>
+      </div>
+
+      <!-- English text -->
+      <div id="en" class="hidden">
+        <p>
+          🌀 The origins of joint hydrotherapy go back to ancient Sumerians, who
+          noticed that hot spring waters eased pain and restored mobility.
+        </p>
+        <p>
+          Later, the Romans built entire thermal complexes, and in Mersin rare
+          mosaic floors of ancient baths have been preserved.
+        </p>
+        <p>
+          With Johann Glauber’s discovery in the 17th century, the scientific
+          era of balneology began. In the 18th century, European resorts —
+          Karlovy Vary, Mariánské Lázně, Baden-Baden, Bad Ems — became centers
+          of medical thought.
+        </p>
+        <p>
+          A. S. Zalmanov proved that thermal waters activate capillaries and
+          nourish cartilage, helping thousands of patients regain mobility. Heat
+          + minerals + improved circulation — a formula known since the
+          Sumerians and confirmed by modern science.
+        </p>
+        <p>
+          We select methods individually, since the causes of joint problems
+          differ for each person. The combined effect of thermal treatments,
+          mineral waters, natural oils, nutrition rich in vegetables and fruits,
+          pure sea air, and spiritual nourishment — visits to sacred places
+          revered by different faiths — creates conditions for true healing.
+        </p>
+      </div>
+
+      <a href="https://mersinhealing.com/booking" class="btn"
+        >📅 Забронировать / Book</a
+      >
+      <a href="https://mersinhealing.com" class="btn"
+        >🏠 Главный сайт / Main site</a
+      >
+      <a href="index.html" class="btn">⬅️ Назад / Back</a>
     </div>
-
-    <!-- English text -->
-    <div id="en" class="hidden">
-      <p>🌀 The origins of joint hydrotherapy go back to ancient Sumerians, who noticed that hot spring waters eased pain and restored mobility.</p>
-      <p>Later, the Romans built entire thermal complexes, and in Mersin rare mosaic floors of ancient baths have been preserved.</p>
-      <p>With Johann Glauber’s discovery in the 17th century, the scientific era of balneology began. In the 18th century, European resorts — Karlovy Vary, Mariánské Lázně, Baden-Baden, Bad Ems — became centers of medical thought.</p>
-      <p>A. S. Zalmanov proved that thermal waters activate capillaries and nourish cartilage, helping thousands of patients regain mobility. Heat + minerals + improved circulation — a formula known since the Sumerians and confirmed by modern science.</p>
-      <p>We select methods individually, since the causes of joint problems differ for each person. The combined effect of thermal treatments, mineral waters, natural oils, nutrition rich in vegetables and fruits, pure sea air, and spiritual nourishment — visits to sacred places revered by different faiths — creates conditions for true healing.</p>
-    </div>
-
-    <a href="https://mersinhealing.com/booking" class="btn">📅 Забронировать / Book</a>
-    <a href="https://mersinhealing.com" class="btn">🏠 Главный сайт / Main site</a>
-    <a href="index.html" class="btn">⬅️ Назад / Back</a>
-  </div>
-</body>
+  </body>
 </html>
+
