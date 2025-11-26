@@ -46,17 +46,26 @@
       document.getElementById("ru").classList.add("hidden");
     }
   }
-
   function getLangFromUrl() {
     const params = new URLSearchParams(window.location.search);
     return params.get('lang') || 'ru'; // по умолчанию русский
   }
-
   window.onload = function() {
     const lang = getLangFromUrl();
     setLang(lang);
   }
-</script>
+  </script>
+    <div id="ru" class="hidden">
+    <p>Русский текст...</p>
+  </div>
+
+  <div id="en" class="hidden">
+    <p>English text...</p>
+  </div>
+  <style>
+    .hidden { display: none; }
+  </style>
+
   </head>
   <body>
     <div
@@ -144,5 +153,6 @@
     </div>
   </body>
 </html>
+
 
 
