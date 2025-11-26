@@ -37,25 +37,26 @@
     </style>
 
     <script>
-      function setLang(lang) {
-        if (lang === "ru") {
-          document.getElementById("ru").classList.remove("hidden");
-          document.getElementById("en").classList.add("hidden");
-        } else {
-          document.getElementById("en").classList.remove("hidden");
-          document.getElementById("ru").classList.add("hidden");
-        }
-      }
+  function setLang(lang) {
+    if (lang === "ru") {
+      document.getElementById("ru").classList.remove("hidden");
+      document.getElementById("en").classList.add("hidden");
+    } else {
+      document.getElementById("en").classList.remove("hidden");
+      document.getElementById("ru").classList.add("hidden");
+    }
+  }
 
-      function getLangFromUrl() {
-        const params = new URLSearchParams(window.location.search);
-        return params.get("lang") || "ru"; // по умолчанию русский
-      }
+  function getLangFromUrl() {
+    const params = new URLSearchParams(window.location.search);
+    return params.get('lang') || 'ru'; // по умолчанию русский
+  }
 
-      window.onload = function () {
-        setLang(getLangFromUrl());
-      };
-    </script>
+  window.onload = function() {
+    const lang = getLangFromUrl();
+    setLang(lang);
+  }
+</script>
   </head>
   <body>
     <div
@@ -143,4 +144,5 @@
     </div>
   </body>
 </html>
+
 
