@@ -17,11 +17,10 @@
     }
 
     header {
-  /* background убран */
-  color: #0d47a1; /* тёмно-синий текст */
-  padding: 25px 20px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.2);}
-    
+      color: #0d47a1; /* тёмно-синий текст */
+      padding: 25px 20px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+    }
     header h1 { margin: 0; font-size: 1.6em; }
 
     .lang-switch { margin-top: 10px; }
@@ -36,39 +35,37 @@
     }
 
     .content {
-  /* фон убран */
-  padding: 20px;
-  max-width: 600px;
-  margin: 40px auto;
-  line-height: 1.6;
-  font-weight: bold;        /* жирный текст */
-  font-size: 2.4em;         /* увеличенный размер шрифта */
-  color: #064420;           /* тёмно-зелёный цвет текста */
-}
+      padding: 20px;
+      max-width: 600px;
+      margin: 40px auto;
+      line-height: 1.6;
+      font-weight: bold;
+      font-size: 2.4em;
+      color: #064420;
+    }
+
     .buttons {
-  position: fixed;
-  bottom: 0;
-  width: 100%;
-  background: transparent;   /* фон убран */
-  padding: 10px;
-  border-top: none;          /* убираем серую линию */
-  display: flex;
-  justify-content: space-around;
-  box-shadow: none;          /* убираем тень */
-}
-.btn {
-  background: rgba(67,160,71,0.85); /* зелёный с лёгкой прозрачностью */
-  color: white;
-  padding: 12px 18px;
-  border: none;
-  border-radius: 25px;
-  text-decoration: none;
-  font-size: 15px;
-  transition: background 0.3s;
-}
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+      background: transparent;
+      padding: 10px;
+      display: flex;
+      justify-content: space-around;
+    }
+    .btn {
+      background: rgba(67,160,71,0.85);
+      color: white;
+      padding: 12px 18px;
+      border: none;
+      border-radius: 25px;
+      text-decoration: none;
+      font-size: 15px;
+      transition: background 0.3s;
+    }
     .btn:hover {
-  background: rgba(46,125,50,0.95); /* чуть темнее при наведении */
-}
+      background: rgba(46,125,50,0.95);
+    }
     .hidden { display: none; }
   </style>
 </head>
@@ -93,10 +90,20 @@
     <p>Our individual programs support recovery for joints (arthritis), weight, liver and pancreas, digestion and psoriasis.</p>
     <p>For English version please visit 👉 @MersinHealing_en_Bot</p>
   </div>
- <script>
+</div>
+
+<!-- ✅ Блок кнопок -->
+<div class="buttons">
+  <a href="joints.html" class="btn" id="btn-joints">🦵 Joints</a>
+  <a href="weight.html" class="btn" id="btn-weight">⚖️ Weight</a>
+  <a href="digestion.html" class="btn" id="btn-digestion">🩺 Digestion</a>
+  <a href="psoriasis.html" class="btn" id="btn-psoriasis">🌿 Psoriasis</a>
+</div>
+
+<script>
   function setLang(lang) {
     if(lang === 'ru') {
-      document.getElementById('title').innerHTML = 
+      document.getElementById('title').innerHTML =
         "🌿 Восстановите здоровье на средиземноморском побережье Турции 🌿 <br> Минеральные и термальные источники Анатолии";
       document.getElementById('ru').classList.remove('hidden');
       document.getElementById('en').classList.add('hidden');
@@ -105,7 +112,7 @@
       document.getElementById('btn-digestion').innerText = "🩺 ЖКТ";
       document.getElementById('btn-psoriasis').innerText = "🌿 Псориаз";
     } else {
-      document.getElementById('title').innerHTML = 
+      document.getElementById('title').innerHTML =
         "🌿 Recover your health on the Mediterranean coast of Turkey 🌿 <br> with the mineral and thermal springs of Anatolia";
       document.getElementById('en').classList.remove('hidden');
       document.getElementById('ru').classList.add('hidden');
@@ -118,8 +125,6 @@
 </script>
 </body>
 </html>
-
-
 
 
 
