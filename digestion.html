@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <title>🩺 ЖКТ — гармония пищеварения</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style>
+    body {
+      font-family: "Segoe UI", Arial;
+      background: #f0f0f0;
+      padding: 20px;
+      text-align: center;
+    }
+    p {
+      line-height: 1.6;
+      font-size: 2.8vw;
+      font-weight: bold;
+      color: #001f4d; /* тёмно-синий */
+      text-shadow: 1px 1px 3px #fff; /* белая тень */
+    }
+    .btn {
+      display: inline-block;
+      margin: 10px;
+      padding: 10px 15px;
+      background: #2e7d32;
+      color: #fff;
+      border-radius: 20px;
+      text-decoration: none;
+      font-size: 2.5vw;
+    }
+    .btn:hover { background: #1b5e20; }
+    .hidden { display: none; }
+  </style>
+  <script>
+    function setLang(lang) {
+      if (lang === "ru") {
+        document.getElementById("ru").classList.remove("hidden");
+        document.getElementById("en").classList.add("hidden");
+      } else {
+        document.getElementById("en").classList.remove("hidden");
+        document.getElementById("ru").classList.add("hidden");
+      }
+    }
+    function getLangFromUrl() {
+      const params = new URLSearchParams(window.location.search);
+      return params.get("lang") || "ru"; // по умолчанию русский
+    }
+    window.onload = function () {
+      const lang = getLangFromUrl();
+      setLang(lang);
+    };
+  </script>
+</head>
+<body>
+  <div style="
+    background-image: url('foneMer.jpg'); /* фон */
+    background-size: cover;
+    background-position: center;
+    filter: brightness(2.1);
+    padding: 40px;
+    font-family: Georgia, serif;
+    line-height: 1.6;
+    border-radius: 12px;
+  ">
+    <!-- Русский текст -->
+    <div id="ru">
+      <p>
+        🩺 <strong>Здоровье ЖКТ — основа энергии и иммунитета</strong><br />
+        — Минеральные воды Мерсина мягко стимулируют секрецию желудка и печени.<br />
+        — Средиземноморская диета нормализует микробиоту и снижает воспаление.<br />
+        — Дыхательные практики улучшают кровоснабжение органов пищеварения.<br />
+        — Прогулки вдоль моря и климатотерапия способствуют восстановлению.<br /><br />
+        В комплексе эти факторы помогают наладить пищеварение и укрепить иммунитет.
+      </p>
+    </div>
+
+    <!-- English text -->
+    <div id="en" class="hidden">
+      <p>
+        🩺 <strong>Digestive health — foundation of energy and immunity</strong><br />
+        — Mersin’s mineral waters gently stimulate stomach and liver secretion.<br />
+        — The Mediterranean diet normalizes microbiota and reduces inflammation.<br />
+        — Breathing practices improve blood supply to digestive organs.<br />
+        — Seaside walks and climatotherapy support recovery.<br /><br />
+        Together these factors restore digestion and strengthen immunity.
+      </p>
+    </div>
+
+    <a href="https://mersinhealing.com/booking" class="btn">📅 Забронировать / Book</a>
+    <a href="https://mersinhealing.com" class="btn">🏠 Главный сайт / Main site</a>
+    <a href="index.html" class="btn">⬅️ Назад / Back</a>
+  </div>
+</body>
+</html>
