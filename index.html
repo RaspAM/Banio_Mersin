@@ -6,141 +6,44 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <style>
       body {
-        font-family: "Segoe UI", Arial, sans-serif;
         margin: 0;
         padding: 0;
-        background-image: url("banio_seaV1.jpg"); /* море город горы небо */
-        background-size: cover; /* растягивает фото на весь экран */
-        background-position: center; /* центрирует */
-        background-attachment: fixed; /* фон остаётся при прокрутке */
-        color: #fff; /* белый текст для контраста */
+        font-family: "Segoe UI", Arial, sans-serif;
+        background: #f0f0f0;
         text-align: center;
       }
-
-      header {
-        color: #0d47a1; /* тёмно-синий текст */
-        padding: 25px 20px;
-        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+      .poster {
+        margin-top: 30px;
       }
-      header h1 {
-        margin: 0;
-        font-size: 1.6em;
-      }
-
-      .lang-switch {
-        margin-top: 10px;
-      }
-      .lang-btn {
-        background: #fff;
-        color: #2e7d32;
-        border: 1px solid #2e7d32;
-        border-radius: 20px;
-        padding: 5px 15px;
-        margin: 0 5px;
-        cursor: pointer;
-      }
-
-      .content {
-        padding: 20px;
-        max-width: 600px;
-        margin: 40px auto;
-        line-height: 1.6;
-        font-weight: bold;
-        font-size: 2.4em;
-        color: #064420;
-      }
-
-      .buttons {
-        position: fixed;
-        bottom: 0;
-        width: 100%;
-        background: transparent;
-        padding: 10px;
-        display: flex;
-        justify-content: center;
+      .poster img {
+        max-width: 90%;
+        height: auto;
+        border-radius: 12px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.3);
       }
       .btn {
-        background: rgba(67, 160, 71, 0.85);
-        color: white;
-        padding: 12px 18px;
-        border: none;
+        display: inline-block;
+        margin-top: 25px;
+        background: #43a047;
+        color: #fff;
+        padding: 12px 24px;
         border-radius: 25px;
         text-decoration: none;
-        font-size: 15px;
+        font-size: 18px;
         transition: background 0.3s;
       }
       .btn:hover {
-        background: rgba(46, 125, 50, 0.95);
-      }
-      .hidden {
-        display: none;
+        background: #2e7d32;
       }
     </style>
   </head>
   <body>
-    <header>
-      <h1 id="title">
-        🌿 Восстановите здоровье на средиземноморском побережье Турции 🌿 <br />
-        Минеральные и термальные источники Анатолии
-      </h1>
-      <div class="lang-switch">
-        <button class="lang-btn" onclick="setLang('ru')">RU</button>
-        <button class="lang-btn" onclick="setLang('en')">EN</button>
-      </div>
-    </header>
-
-    <div class="content">
-      <div id="ru">
-        <p>Целебными водами Анатолии лечились Римляне.</p>
-        <p>
-          Индивидуальные программы помогут при проблемах с суставами (артриты),
-          лишним весом, печенью и поджелудочной, ЖКТ (желудок, кишечник) и
-          псориазе.
-        </p>
-        <p>Выберите кнопку ниже для информации 👇</p>
-      </div>
-      <div id="en" class="hidden">
-        <p>Mineral waters of Anatolia were used by Romans for healing.</p>
-        <p>
-          Our individual programs support recovery for joints (arthritis),
-          weight, liver and pancreas, digestion and psoriasis.
-        </p>
-        <p>For English version please visit 👉 @MersinHealing_en_Bot</p>
-      </div>
-       <div class="buttons">
-       <a href="joints.html" class="btn" id="btn-joints">🦵 Суставы</a>
-       <a href="weight.html" class="btn" id="btn-weight">⚖️ Вес</a>
-       <a href="digestion.html" class="btn" id="btn-digestion">🩺 ЖКТ</a>
-       <a href="psoriasis.html" class="btn" id="btn-psoriasis">🌿 Псориаз</a>
-       </div>
-
-
-    <script>
-      function setLang(lang) {
-        if (lang === "ru") {
-          document.getElementById("title").innerHTML =
-            "🌿 Восстановить здоровье на средиземноморском побережье Турции 🌿 <br> Минеральные и термальные источники Анатолии";
-          document.getElementById("ru").classList.remove("hidden");
-          document.getElementById("en").classList.add("hidden");
-          document.getElementById("btn-joints").innerText = "🦵 Суставы";
-          document.getElementById("btn-weight").innerText = "⚖️ Вес";
-          document.getElementById("btn-digestion").innerText = "🩺 ЖКТ";
-          document.getElementById("btn-psoriasis").innerText = "🌿 Псориаз";
-        } else {
-          document.getElementById("title").innerHTML =
-            "🌿 Recover your health on the Mediterranean coast of Turkey 🌿 <br> with the mineral and thermal springs of Anatolia";
-          document.getElementById("en").classList.remove("hidden");
-          document.getElementById("ru").classList.add("hidden");
-          document.getElementById("btn-joints").innerText = "🦵 Joints";
-          document.getElementById("btn-weight").innerText = "⚖️ Weight";
-          document.getElementById("btn-digestion").innerText = "🩺 Digestion";
-          document.getElementById("btn-psoriasis").innerText = "🌿 Psoriasis";
-        }
-      }
-    </script>
+    <div class="poster">
+      <img src="minappstart.png" alt="Mersin Healing Poster" />
+    </div>
+    <a href="main.html" class="btn">Перейти</a>
   </body>
 </html>
-
 
 
 
