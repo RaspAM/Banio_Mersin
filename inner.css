@@ -1,4 +1,4 @@
- body {
+body {
   font-family: "Segoe UI", Arial, sans-serif;
   background: #f0f0f0;
   padding: 20px;
@@ -13,19 +13,23 @@ p {
   text-shadow: 1px 1px 3px #fff;
 }
 
-.btn {
+.btn,
+.btn:link,
+.btn:visited {
   display: inline-block;
   margin: 10px;
   padding: 10px 15px;
-  background: #2e7d32;
+  background: #2e7d32;   /* тёмно-зелёный до нажатия */
   color: #fff;
   border-radius: 20px;
   text-decoration: none;
   font-size: 2.5vw;
 }
 
-.btn:hover {
-  background: #1b5e20;
+.btn:hover,
+.btn:active {
+  background: #1b5e20;   /* более тёмный зелёный при наведении и клике */
+  color: #fff;
 }
 
 .hidden {
