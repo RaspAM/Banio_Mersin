@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <title>🩺 ЖКТ — гармония пищеварения</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="inner.css">
   <style>
     body {
       font-family: "Segoe UI", Arial;
@@ -18,18 +19,22 @@
       color: #001f4d; /* тёмно-синий */
       text-shadow: 1px 1px 3px #fff; /* белая тень */
     }
-    .btn {
+   .btn {
       display: inline-block;
       margin: 10px;
       padding: 10px 15px;
-      background: #2e7d32;
+      background: #2e7d32 !important; /* фиксируем цвет */
       color: #fff;
       border-radius: 20px;
       text-decoration: none;
       font-size: 2.5vw;
-    }
-    .btn:hover { background: #1b5e20; }
-    .hidden { display: none; }
+      filter: none; /* отключаем влияние brightness */
+      position: relative; /* изолируем от фильтра */
+      z-index: 10;        /* поднимаем над фоном */
+  }
+  .btn:hover {
+    background: #1b5e20 !important; /* фиксируем цвет при наведении */
+  }
       @media (max-width: 768px) {
     p {
       font-size: 14px; /* уменьшено на ~20% */
@@ -107,6 +112,7 @@
 </body>
 
 </html>
+
 
 
 
