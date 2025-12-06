@@ -1,16 +1,25 @@
-body {
-  font-family: "Segoe UI", Arial, sans-serif;
-  background: #f0f0f0;
-  padding: 20px;
+.hero {
+  position: relative;
+  padding: 40px;
+  border-radius: 12px;
+  overflow: hidden;
   text-align: center;
+  font-family: Georgia, serif;
 }
 
-p {
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: url('foneMer.jpg') center / cover no-repeat;
+  filter: brightness(2.1);  /* фильтр только на фоне */
+  z-index: 0;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;               /* контент над фоном, без фильтра */
   line-height: 1.6;
-  font-size: 2.8vw;
-  font-weight: bold;
-  color: #001f4d;
-  text-shadow: 1px 1px 3px #fff;
 }
 
 .btn,
@@ -19,7 +28,7 @@ p {
   display: inline-block;
   margin: 10px;
   padding: 10px 15px;
-  background: #2e7d32;   /* тёмно-зелёный до нажатия */
+  background: #2e7d32;      /* тёмно-зелёный до клика */
   color: #fff;
   border-radius: 20px;
   text-decoration: none;
@@ -28,14 +37,5 @@ p {
 
 .btn:hover,
 .btn:active {
-  background: #1b5e20;   /* более тёмный зелёный при наведении и клике */
-  color: #fff;
-}
-
-.hidden {
-  display: none;
-}
-
-.buttons {
-  margin-top: 20px;
+  background: #1b5e20;      /* темнее при наведении/клике */
 }
