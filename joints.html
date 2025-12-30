@@ -18,18 +18,42 @@
       color: #001f4d; /* тёмно-синий */
       text-shadow: 1px 1px 3px #fff; /* белая тень */
     }
-    .btn {
-      display: inline-block;
-      margin: 10px;
-      padding: 10px 15px;
-      background: #2e7d32;
-      color: #fff;
-      border-radius: 20px;
-      text-decoration: none;
-      font-size: 2.5vw;
-    }
-    .btn:hover { background: #1b5e20; }
-    .hidden { display: none; }
+    ..buttons {
+  position:  static;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding: 12px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  background: transparent;
+}
+.btn {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  white-space: normal;
+  word-wrap: break-word;
+  padding: 12px 20px;
+  background: rgba(255, 255, 255, 0.25);
+  color: #1d3377dc;
+  border: none;
+  border-radius: 20px; /iso 25
+  font-size: 16px;
+  font-weight: bold;
+  text-decoration: none;
+  backdrop-filter: blur(4px);
+  box-shadow: 4px 4px 10px #0c89e4e8;
+  transition: 0.3s ease;
+  max-width: none;
+  min-width: auto;
+}
+.btn:hover {
+  background: rgba(255, 255, 255, 0.45);
+  box-shadow: 6px 6px 14px #0c89e4e8;
+}
     @media (max-width: 768px) {
     p {
       font-size: 14px; /* уменьшено на ~20% */
@@ -86,11 +110,12 @@
   
     <a href="https://raspam.github.io/Mersin-Healing/#contacts" class="btn">Подать заявку📧 </a>
     <a href="https://raspam.github.io/Mersin-Healing/" class="btn">Главный сайт</a>
-     <a href="https://raspam.github.io/Mersin-Healing/" class="btn">Расценки/a>
+     <a href="https://raspam.github.io/Mersin-Healing/" class="btn">Расценки</a>
     <a href="main.html" class="btn">⬅️ Назад / Back</a>
   </div>
 </body>
 </html>
+
 
 
 
