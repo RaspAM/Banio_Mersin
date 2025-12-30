@@ -18,6 +18,7 @@ header {
 }
 header h1 {
   margin: 0;
+   margin-bottom: 10px;
   font-size: 1.6em;
 }
 
@@ -25,7 +26,7 @@ header h1 {
 .content {
   padding: 20px;
   max-width: 600px;
-  margin: 40px auto;
+  margin: 10px auto; / вместо 40
   line-height: 1.4;
   font-weight: bold;
   font-size: 1.4em;
@@ -108,4 +109,5 @@ header h1 {
     gap: 10px;
   }
 }
+
 
