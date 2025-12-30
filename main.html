@@ -51,26 +51,33 @@
   background: transparent;
 }
 
-.buttons {
-  position: fixed;
-  bottom: 0;
-  width: 100%;
-  padding: 12px;
-  display: flex;
-  flex-wrap: wrap;          /* авто-перенос кнопок */
-  justify-content: center;  /* центрирование всех кнопок */
-  gap: 12px;                /* расстояние между кнопками */
-  background: transparent;
+..btn {
+  display: inline-flex;         /* строчный элемент + flex */
+  justify-content: center;      /* центр текста */
+  align-items: center;
+  text-align: center;
+  white-space: normal;          /* перенос текста */
+  word-wrap: break-word;
+
+  padding: 12px 20px;
+
+  background: rgba(255, 255, 255, 0.25);
+  color: #1d3377dc;
+  border: none;
+  border-radius: 25px;
+  font-size: 16px;
+  font-weight: bold;
+
+  backdrop-filter: blur(4px);
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.35);
+
+  transition: 0.3s ease;
+
+  /* КЛЮЧЕВОЕ ИЗМЕНЕНИЕ */
+  max-width: none;              /* кнопки больше НЕ ограничены */
+  min-width: auto;              /* ширина подстраивается под текст */
 }
 
-.btn {
-  display: inline-flex;         /* гибкое содержимое */
-  justify-content: center;      /* центрирование текста по горизонтали */
-  align-items: center;          /* центрирование по вертикали */
-  text-align: center;           /* перенос текста внутри */
-  white-space: normal;          /* разрешить перенос строк */
-  word-wrap: break-word;        /* перенос длинных слов */
-  
   padding: 12px 20px;
   max-width: 200px;             /* кнопка сама регулирует ширину */
   min-width: 120px;             /* но не становится слишком узкой */
@@ -129,6 +136,7 @@
     </div>
   </body>
 </html>
+
 
 
 
