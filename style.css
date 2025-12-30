@@ -1,0 +1,82 @@
+/* === ОБЩИЕ НАСТРОЙКИ === */
+body {
+  font-family: "Segoe UI", Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-image: url("banio_seaV1.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  color: #fff;
+  text-align: center;
+}
+
+/* === ШАПКА === */
+header {
+  color: #1d3377dc;
+  padding: 22px 18px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+header h1 {
+  margin: 0;
+  font-size: 1.6em;
+}
+
+/* === ОСНОВНОЙ ТЕКСТ === */
+.content {
+  padding: 20px;
+  max-width: 600px;
+  margin: 40px auto;
+  line-height: 1.4;
+  font-weight: bold;
+  font-size: 1.4em;
+  color: #1a0733e8;
+  text-align: center;
+}
+
+/* === КНОПКИ === */
+.buttons {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  padding: 12px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  background: transparent;
+}
+
+.btn {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  white-space: normal;
+  word-wrap: break-word;
+
+  padding: 12px 20px;
+
+  background: rgba(255, 255, 255, 0.25);
+  color: #1d3377dc;
+  border: none;
+  border-radius: 25px;
+  font-size: 16px;
+  font-weight: bold;
+  text-decoration: none;
+
+  backdrop-filter: blur(4px);
+
+  box-shadow: 4px 4px 10px #0c89e4e8;
+
+  transition: 0.3s ease;
+
+  max-width: none;
+  min-width: auto;
+}
+
+.btn:hover {
+  background: rgba(255, 255, 255, 0.45);
+  box-shadow: 6px 6px 14px #0c89e4e8;
+}
