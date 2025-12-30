@@ -18,13 +18,13 @@ header {
 }
 header h1 {
   margin: 0;
-   margin-bottom: 10px;
+   margin-bottom: 8px; / в место 10
   font-size: 1.6em;
 }
 
 /* === ОСНОВНОЙ ТЕКСТ === */
 .content {
-  padding: 20px;
+  padding: 10px; / ISO20 
   max-width: 600px;
   margin: 10px auto; / вместо 40
   line-height: 1.4;
@@ -32,6 +32,8 @@ header h1 {
   font-size: 1.4em;
   color: #1a0733e8;
   text-align: center;
+  padding-bottom: 80px; /* место под кнопки */ ISO120
+
 }
 /* === КНОПКИ === */
 .buttons {
@@ -79,10 +81,11 @@ header h1 {
   }
 
   .content {
+     padding-bottom: 150px; /* больше места под кнопки */
     font-size: 1.0em;      /* было 1.4em → уменьшено на ~30% */
     line-height: 1.35;
     padding: 12px;
-    margin: 25px auto;
+    margin: 20px auto; / ISO 25
   }
 
   .hero-content {
@@ -109,5 +112,6 @@ header h1 {
     gap: 10px;
   }
 }
+
 
 
