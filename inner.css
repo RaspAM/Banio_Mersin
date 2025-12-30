@@ -1,8 +1,11 @@
+/* === HERO БЛОК === */
 .hero {
   position: relative;
   padding: 40px;
   border-radius: 12px;
   overflow: hidden;
+  margin: 20px auto;
+  max-width: 900px;
 }
 
 .hero::before {
@@ -10,27 +13,34 @@
   position: absolute;
   inset: 0;
   background: url('foneMer.jpg') center/cover no-repeat;
-  filter: brightness(2.1); /* фильтр только на фоне */
+  filter: brightness(2.1);
   z-index: 0;
 }
 
 .hero-content {
   position: relative;
-  z-index: 1; /* текст поверх фона */
+  z-index: 1;
+  color: #1a0733e8;
+  font-size: 1.4em;
+  font-weight: bold;
+  line-height: 1.45;
+  padding: 20px;
 }
 
+/* === КНОПКИ HERO (если нужны) === */
 .btn {
   display: inline-block;
   margin: 10px;
   padding: 10px 15px;
-  background: #2e7d32;   /* тёмно-зелёный */
+  background: #2e7d32;
   color: #fff;
   border-radius: 20px;
   text-decoration: none;
   font-size: 2.5vw;
+  transition: 0.3s ease;
 }
 
 .btn:hover,
 .btn:active {
-  background: #1b5e20;   /* ещё более тёмный при наведении/клике */
+  background: #1b5e20;
 }
