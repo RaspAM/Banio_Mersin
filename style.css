@@ -28,9 +28,9 @@ header h1 {
   line-height: 1.4;
   font-weight: bold;
   font-size: 1.4em;
-  color: #1a0733e8;
+  color: #266ee2dc; /ISO #1a0733e8;
   text-align: center;
-  padding-bottom: 140px; /* место под кнопки */
+  padding-bottom: 80px; /*ISO 140 место под кнопки */
 }
 .hero {
   position: relative;
@@ -150,6 +150,7 @@ header h1 {
   }
 
   
+
 
 
 
