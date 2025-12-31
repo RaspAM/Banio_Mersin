@@ -5,81 +5,20 @@
   <title>Суставы — жизнь без боли</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <style>
-    body {
-      font-family: "Segoe UI", Arial;
-      background: #f0f0f0;
-      padding: 20px;
-      text-align: center;
-    }
-
-    p {
-      line-height: 1.6;
-      font-size: 2.8vw;
-      font-weight: bold;
-      color: #001f4d;
-      text-shadow: 1px 1px 3px #fff;
-    }
-
-    .buttons {
-      position: static;
-      margin-top: 20px;
-      margin-bottom: 20px;
-      padding: 12px;
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 12px;
-      background: #b6fbfbf0;
-    }
-
-    .btn {
-      display: inline-flex;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      white-space: normal;
-      word-wrap: break-word;
-      padding: 12px 20px;
-      background: rgba(255, 255, 255, 0.25);
-      color: #1d3377dc;
-      border: none;
-      border-radius: 20px; /* iso 25 */
-      font-size: 16px;
-      font-weight: bold;
-      text-decoration: none;
-      backdrop-filter: blur(4px);
-      box-shadow: 2px 2px 5px #0c89e4e8;
-      transition: 0.3s ease;
-    }
-
-    .btn:hover {
-      background: rgba(255, 255, 255, 0.45);
-      box-shadow: 6px 6px 14px #0c89e4e8;
-    }
-
-    @media (max-width: 768px) {
-      p {
-        font-size: 14px;
-      }
-    }
-  </style>
+  <!-- Подключаем единый CSS -->
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-  <div style="
-    background-image: url('foneMer.jpg');
-    background-size: cover;
-    background-position: center;
-    filter: brightness(2.1);
-    padding: 40px;
-    font-family: Georgia, serif;
-    line-height: 1.6;
-    border-radius: 12px;
-  ">
+<header>
+  <h1>Суставы — жизнь без боли</h1>
+</header>
 
-    <div id="ru">
+<div class="content">
+
+  <div class="hero">
+    <div class="hero-content">
 
       <p><strong>Бальнеотерапия суставов</strong></p>
 
@@ -114,23 +53,19 @@
       </p>
 
     </div>
-
-    <div class="buttons">
-      <a href="https://raspam.github.io/Banio_Mersin/form.html" class="btn">Подать заявку📧</a>
-      <a href="https://raspam.github.io/Mersin-Healing/" class="btn">Главный сайт</a>
-      <a href="https://raspam.github.io/Mersin-Healing/" class="btn">Расценки</a>
-      <a href="main.html" class="btn">⬅️ Назад / Back</a>
-    </div>
-
   </div>
+
+  <div class="buttons">
+    <a href="https://raspam.github.io/Banio_Mersin/form.html" class="btn">Подать заявку📧</a>
+    <a href="https://raspam.github.io/Mersin-Healing/" class="btn">Главный сайт</a>
+    <a href="https://raspam.github.io/Mersin-Healing/" class="btn">Расценки</a>
+    <a href="main.html" class="btn">⬅️ Назад / Back</a>
+  </div>
+
+</div>
 
 </body>
 </html>
-
-
-
-
-
 
 
 
