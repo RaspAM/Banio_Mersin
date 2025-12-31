@@ -5,45 +5,8 @@
   <title>Суставы — жизнь без боли</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+  <!-- Подключаем единый CSS -->
   <link rel="stylesheet" href="style.css">
-
-  <style>
-    /* ЛОКАЛЬНЫЕ ДОБАВКИ ДЛЯ ЭТОЙ СТРАНИЦЫ */
-
-    .page {
-      max-width: 900px;
-      margin: 0 auto;
-      padding: 20px;
-      background: #f7f3e9; /* мягкий цвет топлёного молока */
-      border-radius: 12px;
-      text-align: left; /* выравнивание текста */
-      line-height: 1.55;
-      font-size: 1.15em;
-      color: #1a0733e8;
-    }
-
-    .page p {
-      margin-bottom: 18px;
-      word-wrap: break-word;
-      overflow-wrap: break-word;
-    }
-
-    /* Кнопки — берём твой единый стиль, но адаптируем под левый текст */
-    .buttons {
-      margin-top: 25px;
-      display: flex;
-      flex-wrap: wrap;
-      gap: 12px;
-      justify-content: flex-start; /* кнопки слева */
-    }
-
-    @media (max-width: 600px) {
-      .page {
-        padding: 16px;
-        font-size: 1em;
-      }
-    }
-  </style>
 </head>
 
 <body>
@@ -52,7 +15,14 @@
   <h1>Суставы — жизнь без боли</h1>
 </header>
 
-<div class="page">
+<div class="content" style="
+  background: #f7f3e9; 
+  padding: 20px;
+  border-radius: 12px;
+  text-align: left;
+  max-width: 900px;
+  margin: 0 auto;
+">
 
   <p><strong>Бальнеотерапия суставов</strong></p>
 
@@ -97,11 +67,3 @@
 
 </body>
 </html>
-
-
-
-
-
-
-
-
