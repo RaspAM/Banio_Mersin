@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="style.css">
 </head>
 
-<body>
+<body class="form-body">
 
   <div class="form-container">
     <h2>Анкета для консультации</h2>
@@ -17,8 +17,8 @@
       <label>Как к вам обращаться:</label>
       <input type="text" name="name" placeholder="Имя и отчество / Имя и фамилия" required>
 
-      <label>Ваш возраст:</label>
-      <input type="text" name="age" placeholder="Возраст или год рождения" required>
+      <label>Год рождения или возраст:</label>
+      <input type="text" name="age" maxlength="4" placeholder="0000" required>
 
       <label>Что вас беспокоит (выберите одно или несколько):</label>
       <select name="problems" multiple size="4" required>
@@ -31,14 +31,22 @@
       <label>Примечания (если нужно уточнить):</label>
       <textarea name="problem_notes" rows="2"></textarea>
 
-      <label>Вес (кг):</label>
-      <input type="number" name="weight" maxlength="3" placeholder="000">
+      <div class="triple-row">
+        <div>
+          <label>Вес (кг):</label>
+          <input type="number" name="weight" maxlength="3" placeholder="000">
+        </div>
 
-      <label>Рост (см):</label>
-      <input type="number" name="height" maxlength="3" placeholder="000">
+        <div>
+          <label>Рост (см):</label>
+          <input type="number" name="height" maxlength="3" placeholder="000">
+        </div>
 
-      <label>Объём талии (см):</label>
-      <input type="number" name="waist" maxlength="3" placeholder="000">
+        <div>
+          <label>Талия (см):</label>
+          <input type="number" name="waist" maxlength="3" placeholder="000">
+        </div>
+      </div>
 
       <label>Тип проживания:</label>
       <select name="accommodation" required>
@@ -61,7 +69,7 @@
       <input type="text" name="contact_details" placeholder="Ваш номер или email" required>
 
       <label>Сколько времени вы можете выделить на восстановление:</label>
-      <input type="text" name="healing_time" placeholder="Например: 7 дней, 2 недели, 1 месяц" required>
+      <input type="text" name="healing_time" placeholder="7 дней / 2 недели / 1 месяц" required>
 
       <label>Предполагаемые даты заезда и отъезда:</label>
       <div class="date-range">
