@@ -10,6 +10,11 @@ body {
   color: #0a2756dc / ISO #1a0733e8;
   text-align: center;
 }
+body.no-sea {
+  background-image: none !important;
+  background: #f3e9d7 !important; /* кофе с молоком */
+  text-align: left;
+}
 header {
   color: #1d3377dc;
   padding: 22px 18px;
@@ -205,6 +210,7 @@ input.input-small {
     padding: 12px;
   }
   
+
 
 
 
