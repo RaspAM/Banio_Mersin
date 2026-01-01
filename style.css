@@ -151,14 +151,13 @@ input, textarea, select {
   border-radius: 6px;
   background: #f7f1e3; /* мягкий молочный */
   font-size: 15px;
+  box-sizing: border-box; /* ← ключевой момент */
 }
-
-/* === МАЛЕНЬКИЕ ПОЛЯ (возраст, вес, рост, талия) === */
 /* === МАЛЕНЬКИЕ ПОЛЯ (возраст, вес, рост, талия) === */
 input.input-small {
-  width: 40px !important;
-  min-width: 40px !important;
-  max-width: 40px !important;
+  width: 45px !important;
+  min-width: 45px !important;
+  max-width: 45px !important;
   padding: 8px;
   text-align: center;
   border: 1px solid #b8b0a3 !important; /* вернуть границу */
@@ -212,6 +211,7 @@ input.input-small {
     padding: 12px;
   }
   
+
 
 
 
