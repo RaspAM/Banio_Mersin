@@ -2,7 +2,7 @@
 <html lang="ru">
 <head>
   <meta charset="UTF-8">
-  <title>Анкета — Mersin Healing</title>
+  <title>Заявка-Анкета — Mersin Healing</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
 </head>
@@ -14,19 +14,19 @@
 
     <form id="healingForm">
 
-      <label>Как вас зовут:</label>
+      <label>Как к Вам обрашатся:</label>
       <input type="text" name="name" required>
 
       <label>Ваш возраст:</label>
       <input type="number" name="age" required>
 
-      <label>Какие проблемы (недуги) вас беспокоят:</label>
+      <label>Что вас беспокоит ваши недуги - проблемы здоровья :</label>
       <textarea name="problems" rows="3" required></textarea>
 
       <label>Как долго вы этим страдаете:</label>
       <input type="text" name="duration" required>
 
-      <label>Вес (кг):</label>
+      <label>Ваш Вес (кг):</label>
       <input type="number" name="weight">
 
       <label>Рост (см):</label>
@@ -34,10 +34,23 @@
 
       <label>Объем талии (см):</label>
       <input type="number" name="waist">
+      <label>Сколько времени вы можете выделить на восстановление в Мерсине:</label>
+        <input type="text" name="healing_time" placeholder="Например: 7 дней, 2 недели, 1 месяц" required>
+      <label>Выберите предполагаемые даты заезда и отъезда:</label>
+      <div class="date-range">
+      <input type="date" name="arrival_date" required>
+      <input type="date" name="departure_date" required>
+      </div>
+      <label>Предпочтительный вид связи:</label>
+      <select name="contact_method" required>
+      <option value="Telegram">Telegram</option>
+      <option value="WhatsApp">WhatsApp</option>
+      <option value="Email">Email</option>
+      </select>
 
-      <label>Ваши контакты (Telegram, WhatsApp, Email):</label>
-      <textarea name="contacts" rows="2" required></textarea>
-
+    <label>Укажите номер или адрес для связи:</label>
+    <input type="text" name="contact_details" placeholder="Ваш номер или email" required>
+     
       <button type="submit" class="btn-submit">Отправить заявку</button>
 
     </form>
@@ -46,4 +59,5 @@
   <script src="send.js"></script>
 
 </body>
+
 </html>
