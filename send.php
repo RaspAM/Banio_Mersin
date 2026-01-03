@@ -1,7 +1,7 @@
 <?php
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
-    $to = "andreyrasp@outlook.com"; // email
+    $to = "info@mersinwellness.com"; // email
     $subject = "Новая заявка Mersin Healing";
 
     $message = "
@@ -22,10 +22,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 Даты: {$_POST['arrival_date']} — {$_POST['departure_date']}
 ";
 
-    $headers = "From: no-reply@mersin-healing.com\r\n";
+    $headers = "From: no-reply@mersinwellness.com\r\n";
 
     mail($to, $subject, $message, $headers);
 
     echo "OK";
 }
+
 ?>
