@@ -1,4 +1,4 @@
-/* === ОБЩИЕ НАСТРОЙКИ === */
+/* === Microsoft fuckup system in all=== */
 body {
   font-family: "Segoe UI", Arial, sans-serif;
   margin: 0;
@@ -7,12 +7,12 @@ body {
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
-  color: #0a2756dc 
+  color: #0a2756dc;
   text-align: center;
 }
 body.no-sea {
-  background-image: none !important;
-  background: #f3e9d7 !important; /* кофе с молоком */
+  background-image: none;
+  background: #f3e9d7; /* кофе с молоком */
   text-align: left;
 }
 header {
@@ -23,7 +23,7 @@ header {
 
 header h1 {
   margin: 0;
-  margin-bottom: 8px;
+  margin-bottom: 6px; /*-ISO-8*/
   font-size: 1.6em;
 }
 .content {
@@ -35,7 +35,7 @@ header h1 {
   font-size: 1.4em;
   color: #0a2756dc; 
   text-align: center;
-  padding-bottom: 80px; /*ISO 140 место под кнопки */
+  padding-bottom: 70px; /*ISO 80 место под кнопки */
 }
 .hero {
   position: relative;
@@ -117,100 +117,91 @@ header h1 {
   box-shadow: 6px 6px 14px #0c89e4e8;
 }
 /* === ФОН ТОЛЬКО У ФОРМЫ (кофе с молоком) === */
+/* === ЧИСТЫЙ СТИЛЬ ФОРМЫ === */
+
 .form-container {
   max-width: 420px;
   margin: 40px auto;
-  background: #f3e9d7; /* кофе с молоком */
-  padding: 25px;
+  background: #f3e9d7;
+  padding: 5px;
   border-radius: 12px;
   box-shadow: 0 0 12px rgba(0,0,0,0.08);
+  text-align: left; /* ← ключевой момент */
 }
 
-
-/* === ЗАГОЛОВОК === */
-h2 {
-  margin-bottom: 20px;
-  color: #333;
-  font-weight: 600;
-}
-
-
-/* === ПОДПИСИ === */
-label {
-  display: block;
-  margin-top: 15px;
-  margin-bottom: 5px;
-  font-weight: 600;
+/* Подписи */
+.form-container label {
+  margin: 0 0 5px 0;
+  font-weight: normal; /* ← убираем жирность */
   color: #444;
 }
-/* === ПОЛЯ ВВОДА (молочный фон, НЕ белый) === */
-input, textarea, select {
+
+/* Поля ввода */
+.form-container input,
+.form-container textarea,
+.form-container select {
   width: 100%;
   padding: 10px;
   border: 1px solid #d8d2c8;
   border-radius: 6px;
-  background: #f7f1e3; /* мягкий молочный */
+  background: #f7f1e3;
   font-size: 15px;
-  box-sizing: border-box; /* ← ключевой момент */
+  box-sizing: border-box;
 }
-/* === МАЛЕНЬКИЕ ПОЛЯ (возраст, вес, рост, талия) === */
-input.input-small {
-  width: 50px !important;
-  min-width: 50px !important;
-  max-width: 50px !important;
+
+/* Маленькие поля */
+.form-container .input-small {
+  width: 60px;
+  min-width: 60px;
+  max-width: 60px;
   padding: 8px;
   text-align: center;
-  border: 1px solid #b8b0a3 !important; /* вернуть границу */
-  box-sizing: border-box; /* чтобы рамка не исчезала */
+  border: 1px solid #b8b0a3;
 }
-/* === ТРИ ПОЛЯ В РЯД === */
+/* === weight height waist === */
 .triple-row {
   display: flex;
   gap: 10px;
 }
+
 .triple-row div {
   flex: 0 0 auto;
 }
 
-/* === ДАТЫ === */
-.date-range {
+/* === ЧЕКБОКСЫ — ЧИСТЫЙ ВАРИАНТ === */
+
+.checkbox-group {
   display: flex;
+  flex-direction: column;
   gap: 10px;
-}
-/* === КНОПКА === */
-.btn-submit {
-  margin-top: 25px;
-  width: 100%;
-  padding: 12px;
-  background: #c9a97a;
-  color: white;
-  border: none;
-  border-radius: 8px;
-  font-size: 16px;
-  cursor: pointer;
-  transition: 0.2s;
-}
-.btn-submit:hover {
-  background: #b89263;
-}
-.form-message {
-  position: fixed;
-  bottom: 20px;
-  left: 50%;
-  transform: translateX(-50%);
-  background: rgba(60, 60, 60, 0.9);
-  color: #fff;
-  padding: 12px 20px;
-  border-radius: 8px;
-  font-size: 15px;
-  opacity: 0;
-  transition: opacity 0.3s ease;
-  z-index: 9999;
+  margin-top: 10px;
 }
 
-.form-message.visible {
-  opacity: 1;
+.checkbox-group label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 0;
+  padding: 0;
+  font-size: 15px;
+  font-weight: normal;
+  color: #444;
+  cursor: pointer;
+  text-align: left; /* ← фиксирует выравнивание */
 }
+
+.checkbox-group input[type="checkbox"] {
+  width: auto; /* ← убирает растягивание */
+  margin: 0;
+  padding: 0;
+}
+.form-container {
+  text-align: left;
+}
+.checkbox-group input[type="checkbox"] {
+  accent-color: green;
+}
+/* ---адаптация--- */
   @media (max-width: 600px) {
   header h1 {
     font-size: 1.1em;
@@ -229,6 +220,25 @@ input.input-small {
     padding: 12px;
   }
   
+  /* Планшеты и десктопы — уменьшаем на 30% */
+@media (min-width: 768px) {
+  .bot-scale {
+    transform: scale(0.7);
+    transform-origin: top center;
+    width: 142%; /* компенсирует уменьшение */
+    margin: 0 auto;
+  }
+}
+/* Мобильные — оставляем как есть */
+@media (max-width: 767px) {
+  .bot-scale {
+    transform: none;
+    width: 100%;
+  }
+}
+
+  
+
 
 
 
