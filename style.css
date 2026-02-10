@@ -13,7 +13,7 @@ body {
 body.no-sea {
   background-image: none;
   background: #f3e9d7; /* кофе с молоком */
-  text-align: left;
+  text-align: center;/* ISO left */
 }
 header {
   color: #1d3377dc;
@@ -24,7 +24,7 @@ header {
 header h1 {
   margin: 0;
   margin-bottom: 6px; /*-ISO-8*/
-  margin-left: 12px;
+   /*margin-left: 20px;    ← сдвиг вправо iso 15px */
   font-size: 1.6em;
 }
 .content {
@@ -237,23 +237,6 @@ header h1 {
     width: 100%;
   }
 }
-
-  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
