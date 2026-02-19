@@ -29,14 +29,14 @@ header h1 {
 }
 .content {
   padding: 10px;
-  max-width: 600px;
+  max-width: 800px; /*-ISO-600*/
   margin: 10px auto;
   line-height: 1.4;
   font-weight: bold;
-  font-size: 1.4em;
+  font-size: 1.2em; /*-ISO-1.4em*/
   color: #0a2756dc; 
   text-align: center;
-  padding-bottom: 70px; /*ISO 80 место под кнопки */
+  padding-bottom: 60px; /*ISO 70 место под кнопки */
 }
 .hero {
   position: relative;
@@ -237,6 +237,7 @@ header h1 {
     width: 100%;
   }
 }
+
 
 
 
